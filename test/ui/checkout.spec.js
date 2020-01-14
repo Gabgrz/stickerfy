@@ -1,4 +1,4 @@
-require('chromedriver');
+require('selenium-webdriver/firefox');
 const assert = require('assert');
 const {Builder, By} = require('selenium-webdriver');
 
@@ -6,7 +6,7 @@ describe('Checkout workflow', function() {
   let driver;
 
   before(async function() {
-    driver = await new Builder().forBrowser('chrome').build();
+    driver = await new Builder().forBrowser('firefox').build();
   });
 
   it('adds a sticker to the cart and checks out', async function() {
